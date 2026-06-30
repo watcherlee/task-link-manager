@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+data
+*.db
+.env*
+!.env.example
+README.md
+docs
+.cursor
+coverage
+terminals

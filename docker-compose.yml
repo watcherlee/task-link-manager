@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      TASKS_DB_PATH: /data/tasks.db
+      CRON_SECRET: ${CRON_SECRET:-}
+    volumes:
+      - task-data:/data
+    restart: unless-stopped
+
+volumes:
+  task-data:
